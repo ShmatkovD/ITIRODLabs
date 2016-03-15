@@ -1,0 +1,44 @@
+.row {
+}
+
+.cell {
+    display: inline-block;
+    width: 49%;
+}
+
+.central-banner {
+    width: 200px;
+    margin: auto;
+    align-items: center;
+    align-self: center;
+}
+
+.header {
+    margin: auto;
+    text-align: center;
+}
+
+.form {
+    margin: auto;
+    width: 600px;
+}
+
+.container {
+    margin: auto;
+    width: 650px;
+    align-content: center;
+    align-self: center;
+}
+
+.video {
+    width: 500px;
+    margin: auto;
+}
+
+.submit {
+    margin: auto;
+    margin-top: 20px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}

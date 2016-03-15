@@ -1,0 +1,51 @@
+.header {
+    align-self: center;
+    font-family: Arial;
+    text-align: center;
+}
+
+.centralized-text {
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.container {
+    align-self: center;
+    align-content: center;
+    align-items: center;
+}
+
+.cell {
+    display: inline-block;
+    width: 32%;
+    border: 1px solid black;
+    margin: -1px;
+    padding: 3px;
+}
+
+.row {
+}
+
+.inner-table {
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+}
+
+.content {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    alignment: center;
+}
+
+.code {
+    width: 400px;
+    border: 2px solid bisque;
+    background-color: beige;
+    margin: auto;
+}

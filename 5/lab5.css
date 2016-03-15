@@ -1,0 +1,57 @@
+.animation-container {
+    animation: rotate 3s infinite linear;
+    margin: auto;
+    margin-top: 300px;
+    transform-style: preserve-3d;
+    width: 400px;
+    height: 400px;
+}
+
+.options {
+    height: 400px;
+    width: 400px;
+    opacity: .8;
+    border: 2px solid black;
+    position: absolute;
+}
+
+.perspective {
+    perspective: 1500px;
+    perspective-origin: 500px;
+}
+
+.top {
+    background-color: yellow;
+    transform: translateY(-200px) rotateX(90deg);
+}
+
+.bottom {
+    background-color: red;
+    transform: translateY(200px) rotateX(-90deg);
+}
+
+.left {
+    background-color: green;
+    transform: translateX(-200px) rotateY(90deg);
+}
+
+.right {
+    background-color: blue;
+    transform: translateX(200px) rotateY(-90deg);
+}
+
+.front {
+    background-color: cyan;
+    transform: translateZ(-200px);
+}
+
+.back {
+    background-color: blueviolet;
+    transform: translateZ(200px);
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+    }
+}

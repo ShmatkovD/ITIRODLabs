@@ -1,4 +1,4 @@
-var sort = function(ar, cmp){
+let sort = function(ar, cmp){
     if (cmp === undefined){
         cmp = function(x, y){
             if (x < y){
@@ -9,11 +9,11 @@ var sort = function(ar, cmp){
     }
 
     n = ar.length;
-    for (var i = 0; i < n; i += 1){
-        for (var j = 0; j < n - 1; j += 1){
+    for (let i = 0; i < n; i += 1){
+        for (let j = 0; j < n - 1; j += 1){
 
             if (!cmp(ar[j], ar[j + 1])){
-                var temp = ar[j];
+                let temp = ar[j];
                 ar[j] = ar[j + 1];
                 ar[j + 1] = temp;
             }
@@ -24,17 +24,17 @@ var sort = function(ar, cmp){
     return ar;
 };
 
-var cmp = function(x, y){
+let cmp = function(x, y){
     if (x < y){
         return false;
     }
     return true;
 };
 
-var values = prompt("write values");
+let values = prompt("write values");
 values = values.split(" ");
-var ar = [];
-for (var i = 0; i < values.length; i += 1){
+let ar = [];
+for (let i = 0; i < values.length; i += 1){
     ar.push(
         parseInt(values[i])
     );

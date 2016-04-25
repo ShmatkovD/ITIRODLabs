@@ -1,22 +1,20 @@
-var range = function(start, finish, step){
+function* range(start, finish, step){
     if (step === undefined){
         step = 1;
     }
-    var k = 1;
+    let k = 1;
     if (step < 0){
         k = -1;
     }
-    if ((finish - start) * step <= 0){
+    if ((finish - start) * step <= 0) {
         throw "Incorrect values.";
     }
-    var result = [];
-    for (var current = start; current*k < finish*k; current += step){
-        result.push(current);
+    for (let current = start; current*k < finish*k; current += step){
+        yield current;
     }
-    return result;
 };
 
-var args = prompt("write 2 numbers");
+let args = prompt("write 2 numbers");
 args = args.split(" ");
 alert(
     range(

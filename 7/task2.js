@@ -1,19 +1,17 @@
-var checkNumber = function(x){
-    return Number(x) === x;
-};
+let checkNumber = x => Number(x) === x;
 
-var oneParam = function(func){
+let oneParam = function(func){
     return function(x){
-        var isNumber = checkNumber(x);
-        var result = func(x);
+        let isNumber = checkNumber(x);
+        let result = func(x);
         return [isNumber, result];
     };
 };
 
-var manyParams = function(funct){
+let manyParams = function(funct){
     return function(){
-        var isNumbers = true;
-        for (var i = 0; i < arguments.length; i += 1){
+        let isNumbers = true;
+        for (let i = 0; i < arguments.length; i += 1){
             isNumbers &= checkNumber(arguments[i]);
         }
         var result = funct.apply({
@@ -31,11 +29,11 @@ var manyParams = function(funct){
     };
 };
 
-var test1 = function(x){
+let test1 = function(x){
     return x;
 };
 
-var test2 = function(x, y){
+let test2 = function(x, y){
     console.log(this.isNumbers);
     return [x, y];
 };

@@ -1,4 +1,3 @@
-'use strict';
 
 while (true){
     let a = prompt("Write number 1:");

@@ -13,6 +13,8 @@ function Task(title, description, start, finish) {
 
 function PerformingTask() {
     Task.apply(this, arguments);
+    this.a = arguments[4];
+    this.b = arguments[5];
     var progress = 0;
     this._isFinished = false;
 
@@ -25,15 +27,17 @@ function PerformingTask() {
         }
     }
 }
+PerformingTask.prototype = Object.create(Task);
+PerformingTask.prototype.constructor = PerformingTask;
 
 PerformingTask.prototype.getStatus = function(){
     return this._isFinished;
 };
 
-PerformingTask.prototype = Object.create(Task);
-PerformingTask.prototype.constructor = PerformingTask;
-
-var task = new PerformingTask("a", "b", "01.02.2016", "02.02.2016");
+var task = new PerformingTask("a", "b", "01.02.2016", "02.02.2016", 1, 2);
 console.dir(task);
 task.progress(10);
 alert(task.progress());
+alert(task.title);
+alert(task.a);
+alert(task.b);

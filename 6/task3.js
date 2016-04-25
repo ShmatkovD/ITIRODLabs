@@ -1,13 +1,13 @@
 
-var number = parseInt(prompt("Write number of the fibonachi number you want to know"));
+let number = parseInt(prompt("Write number of the fibonachi number you want to know"));
 
 try {
-    var a = 0;
-    var b = 1;
+    let a = 0;
+    let b = 1;
     if (number >= 0 && !isNaN(number)){
-        for (var i = 1; i < number; i += 1){
+        for (let i = 1; i < number; i += 1){
             a += b;
-            var temp = a;
+            let temp = a;
             a = b;
             b = temp;
         }
@@ -17,6 +17,9 @@ try {
         throw "Ooops, something wrong!";
     }
 } catch (ex) {
-    alert("Exception! " + ex);
+    alert(`Exception! ${ex}`);
 }
 
+(a, b) => {
+    return a, b
+};
